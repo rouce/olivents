@@ -1,0 +1,16 @@
+<ion-view view-title="Events">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="event in events.data | orderBy:'-lastMessage.timestamp'"
+          class="item-event item-remove-animate item-avatar item-icon-right"
+          type="item-text-wrap"
+          href="/#/tab/events/{{event._id}}">
+          <img ng-src="{{event.picture}}">
+          <h2>{{event.name}}</h2>
+          <p>{{event.lastMessage.text}}</p>
+          <span class="last-message-timestamp">{{event.lastMessage.timestamp | calendar}}</span>
+          <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
