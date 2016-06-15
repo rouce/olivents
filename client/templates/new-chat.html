@@ -7,6 +7,7 @@
   </ion-header-bar>
 
   <ion-content>
+    <input ng-model="chat.name" type="text" placeholder="Event name">
     <div class="list">
       <a ng-repeat="user in chat.users" ng-click="chat.newChat(user._id)" class="item">
         <h2>{{user.profile.name}}</h2>

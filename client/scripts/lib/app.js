@@ -22,7 +22,7 @@ import SettingsCtrl from "../controller/settings.controller";
 import CalendarCtrl from "../controller/calendar.controller";
 import NewChatCtrl from "../controller/new-chat.controller";
 
-import NewChatService from "../controller/new-chat.service";
+import NewChatService from "../services/new-chat.service";
 
 import CalendarFilter from "../filter/calendar.filter";
 import InputDirective from "../directives/input.directive";

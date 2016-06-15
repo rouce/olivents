@@ -6,6 +6,8 @@ export default class NewChatCtrl extends Controller {
   constructor(){
     super(...arguments);
 
+    this.subscribe("users");
+
     this.helpers({
       users(){
         return Meteor.users.find({ _id: { $ne: this.currentUserId } });
@@ -14,17 +16,21 @@ export default class NewChatCtrl extends Controller {
   }
 
   newChat(userId){
-    this.callMethod("newChat", userId, (err, chatId) => {
+    this.callMethod("newChat", userId, this.name, (err, eventId) => {
       this.hideNewChatModal();
       if(err){
         return this.handleError(err);
       }
-      this.goToChat(chatId);
+      this.goToChat(eventId);
     });
   }
 
-  goToChat(chatId){
-    this.$state.go("tab.chat", { chatId });
+  hideNewChatModal(){
+    this.NewChat.hideModal();
+  }
+
+  goToChat(eventId){
+    this.$state.go("tab.chat", { eventId });
   }
 
   handleError(err){
