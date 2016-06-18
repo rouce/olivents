@@ -1,0 +1,10 @@
+{
+  "ACCOUNTS_PHONE": {
+    "ADMIN_NUMBERS": [ "+41794838732" ]
+  },
+  "galaxy.meteor.com": {
+    "env": {
+      "MONGO_URL": "mongodb://rouce:b3be3542bdam@ds017584.mlab.com:17584/olivents_db"
+    }
+  }
+}
