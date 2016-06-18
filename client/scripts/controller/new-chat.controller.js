@@ -16,6 +16,10 @@ export default class NewChatCtrl extends Controller {
   }
 
   newChat(userId){
+    if(!this.name){
+      return this.handleError({ reason: "Eventname is required" });
+    }
+
     this.callMethod("newChat", userId, this.name, (err, eventId) => {
       this.hideNewChatModal();
       if(err){
@@ -34,10 +38,10 @@ export default class NewChatCtrl extends Controller {
   }
 
   handleError(err){
-    this.$log.error("new chat creation failed", err);
+    this.$log.error("New chat creation failed", err);
 
     this.$ionicPopup.alert({
-      title: err.reason || "new chat creation failed",
+      title: err.reason || "New chat creation failed",
       template: "Please try again",
       okType: "button-positive button-clear"
     });

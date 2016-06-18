@@ -4,6 +4,7 @@
   },
   "galaxy.meteor.com": {
     "env": {
+      "ROOT_URL": "http://olivents.meteorapp.com",
       "MONGO_URL": "mongodb://rouce:b3be3542bdam@ds017584.mlab.com:17584/olivents_db"
     }
   }
