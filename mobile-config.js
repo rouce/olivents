@@ -4,5 +4,6 @@ App.info({
   description: 'Olivents',
   author: 'rouce',
   email: 'ex@ample.com',
-  website: 'http://www.google.com'
+  website: 'http://www.google.com',
+  version: "0.0.3"
 });

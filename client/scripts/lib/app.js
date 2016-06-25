@@ -11,8 +11,6 @@ import Loader from "angular-ecmascript/module-loader";
 import { Meteor } from "meteor/meteor";
 
 //modules
-import Routes from "../routes";
-
 import EventsCtrl from "../controller/events.controller";
 import ChatCtrl from "../controller/chat.controller";
 import LoginCtrl from "../controller/login.controller";
@@ -27,6 +25,8 @@ import NewChatService from "../services/new-chat.service";
 import CalendarFilter from "../filter/calendar.filter";
 import InputDirective from "../directives/input.directive";
 
+import Routes from "../routes";
+
 const App = "Olivents";
 
 Angular.module(App, [
@@ -37,18 +37,18 @@ Angular.module(App, [
 ]);
 
 new Loader(App)
-  .load(Routes)
   .load(EventsCtrl)
   .load(ChatCtrl)
-  .load(LoginCtrl)
   .load(ConfirmationCtrl)
   .load(ProfileCtrl)
   .load(SettingsCtrl)
   .load(CalendarCtrl)
   .load(NewChatCtrl)
+  .load(LoginCtrl)
   .load(NewChatService)
   .load(InputDirective)
-  .load(CalendarFilter);
+  .load(CalendarFilter)
+  .load(Routes);
 
 
 //startup
