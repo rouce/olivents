@@ -13,7 +13,7 @@ import { Meteor } from "meteor/meteor";
 //modules
 import EventsCtrl from "../controller/events.controller";
 import ChatCtrl from "../controller/chat.controller";
-import LoginCtrl from "../controller/login.controller";
+import Login5Ctrl from "../controller/login.controller";
 import ConfirmationCtrl from "../controller/confirmation.controller";
 import ProfileCtrl from "../controller/profile.controller";
 import SettingsCtrl from "../controller/settings.controller";
@@ -44,7 +44,7 @@ new Loader(App)
   .load(SettingsCtrl)
   .load(CalendarCtrl)
   .load(NewChatCtrl)
-  .load(LoginCtrl)
+  .load(Login5Ctrl)
   .load(NewChatService)
   .load(InputDirective)
   .load(CalendarFilter)

@@ -61,7 +61,7 @@ class RoutesConfig extends Config {
       .state("login", {
         url: "/login",
         templateUrl: "client/templates/login.html",
-        controller: "LoginCtrl as logger"
+        controller: "Login5Ctrl as logger"
       })
       .state("confirmation", {
         url: "/confirmation/:phone",
