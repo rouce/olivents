@@ -2,7 +2,7 @@ import { _ } from "meteor/underscore";
 import { Accounts } from "meteor/accounts-base";
 import { Controller } from "angular-ecmascript/module-helpers";
 
-export default class Login5Ctrl extends Controller {
+export default class LoginCtrl extends Controller {
   login(){
     if(_.isEmpty(this.phone)){
       return;
@@ -38,8 +38,6 @@ export default class Login5Ctrl extends Controller {
   }
 
   handleError(err){
-    this.$log.error("Login error ", err);
-
     this.$ionicPopup.alert({
       title: err.reason || "Login failed",
       template: "Please try again",
@@ -48,4 +46,4 @@ export default class Login5Ctrl extends Controller {
   }
 }
 
-Login5Ctrl.$inject = [ "$state", "$ionicLoading", "$ionicPopup", "$log" ];
+LoginCtrl.$inject = [ "$state", "$ionicLoading", "$ionicPopup" ];
