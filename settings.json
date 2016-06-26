@@ -1,6 +1,7 @@
 {
   "ACCOUNTS_PHONE": {
-    "ADMIN_NUMBERS": [ "+41794838732" ]
+    "ADMIN_NUMBERS": [ "41794838732" ],
+    "MASTER_CODE": "5588"
   },
   "galaxy.meteor.com": {
     "env": {
@@ -8,7 +9,7 @@
       "MONGO_URL": "mongodb://rouce:b3be3542bdam@ds017584.mlab.com:17584/olivents_db"
     }
   },
-  "twilio": {
+  "TWILIO": {
     "FROM": "41798073343",
     "ACCOUNT_SID": "AC69fa596961f79b7ac3cfd01d9e04697a",
     "AUTH_TOKEN": "c13507a9172f75858764a7f9e70a8dd1"
