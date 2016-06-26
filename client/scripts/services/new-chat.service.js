@@ -1,4 +1,5 @@
 import { Service } from "angular-ecmascript/module-helpers";
+import NewChatCtrl from "../controller/new-chat.controller";
 
 export default class NewChatService extends Service {
   constructor(){
@@ -9,6 +10,8 @@ export default class NewChatService extends Service {
 
   showModal(){
     this.scope = this.$rootScope.$new();
+
+    this.scope.NewChatCtrl = NewChatCtrl;
 
     this.$ionicModal.fromTemplateUrl(this.templateUrl, {
       scope: this.scope

@@ -27,7 +27,7 @@ class RoutesConfig extends Config {
         resolve: {
           user: this.isAuthorized,
           events() {
-            return Meteor.subscribe("events");
+            return Meteor.subscribe("events", Meteor.userId());
           }
         }
       })

@@ -5,16 +5,14 @@ Meteor.publish("users", () => {
   return Meteor.users.find({}, { fields: { profile: 1 } });
 });
 
-Meteor.publishComposite("events", () => {
-  /*
-  if(!this.userId){
+Meteor.publishComposite("events", (userId) => {
+  if(!userId){
     return;
   }
-  */
 
   return {
     find(){
-      return Events.find({ userIds: "J3HDHRxWTAN7K4hcR" });
+      return Events.find({ userIds: userId });
     },
     children: [
       {
