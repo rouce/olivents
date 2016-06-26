@@ -28,7 +28,7 @@ import CalendarFilter from "../filter/calendar.filter";
 import InputDirective from "../directives/input.directive";
 
 
-const App = "Olivents";
+const App = "olivents";
 
 Angular.module(App, [
   "angular-meteor",
@@ -38,18 +38,18 @@ Angular.module(App, [
 ]);
 
 new Loader(App)
-  .load(RoutesConfig)
   .load(NewChatService)
   .load(InputDirective)
   .load(CalendarFilter)
-  .load(LoginCtrl)
+//  .load(LoginCtrl)
   .load(EventsCtrl)
   .load(ChatCtrl)
   .load(ConfirmationCtrl)
   .load(ProfileCtrl)
   .load(SettingsCtrl)
   .load(CalendarCtrl)
-  .load(NewChatCtrl);
+  .load(NewChatCtrl)
+  .load(RoutesConfig);
 
 
 //startup

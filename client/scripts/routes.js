@@ -2,6 +2,15 @@ import { _ } from "meteor/underscore";
 import { Meteor } from "meteor/meteor";
 import { Config, Runner } from "angular-ecmascript/module-helpers";
 
+import EventsCtrl from "./controller/events.controller";
+import ChatCtrl from "./controller/chat.controller";
+import LoginCtrl from "./controller/login.controller";
+import ConfirmationCtrl from "./controller/confirmation.controller";
+import ProfileCtrl from "./controller/profile.controller";
+import SettingsCtrl from "./controller/settings.controller";
+import CalendarCtrl from "./controller/calendar.controller";
+import NewChatCtrl from "./controller/new-chat.controller";
+
 class RoutesConfig extends Config {
   constructor(){
     super(...arguments);
@@ -27,7 +36,8 @@ class RoutesConfig extends Config {
         views: {
           "tab-events": {
             templateUrl: "client/templates/events.html",
-            controller: "EventsCtrl as events",
+            controller: EventsCtrl,
+            controllerAs: "events"
           }
         }
       })
@@ -36,7 +46,8 @@ class RoutesConfig extends Config {
         views: {
           "tab-events": {
             templateUrl: "client/templates/chat.html",
-            controller: "ChatCtrl as chat"
+            controller: ChatCtrl,
+            controllerAs: "chat"
           }
         }
       })
@@ -45,7 +56,8 @@ class RoutesConfig extends Config {
         views: {
           "tab-settings": {
             templateUrl: "client/templates/settings.html",
-            controller: "SettingsCtrl as settings"
+            controller: SettingsCtrl,
+            controllerAs: "settings"
           }
         }
       })
@@ -54,24 +66,28 @@ class RoutesConfig extends Config {
         views: {
           "tab-calendar": {
             templateUrl: "client/templates/calendar.html",
-            controller: "CalendarCtrl as calendar"
+            controller: CalendarCtrl,
+            controllerAs: "calendar"
           }
         }
       })
       .state("login", {
         url: "/login",
         templateUrl: "client/templates/login.html",
-        controller: "LoginCtrl as loginCtrl"
+        controller: LoginCtrl,
+        controllerAs: "loginCtrl"
       })
       .state("confirmation", {
         url: "/confirmation/:phone",
         templateUrl: "client/templates/confirmation.html",
-        controller: "ConfirmationCtrl as confirmation"
+        controller: ConfirmationCtrl,
+        controllerAs: "confirmation"
       })
       .state("profile", {
         url: "/profile",
         templateUrl: "client/templates/profile.html",
-        controller: "ProfileCtrl as profile",
+        controller: ProfileCtrl,
+        controllerAs: "profile",
         resolve: {
           user: this.isAuthorized
         }

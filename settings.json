@@ -8,8 +8,9 @@
       "MONGO_URL": "mongodb://rouce:b3be3542bdam@ds017584.mlab.com:17584/olivents_db"
     }
   },
-  "kadira": {
-    "appId": "6L6nwqLRqd8R4pbFd", 
-    "appSecret": "40c51735-e7c6-47e0-9b13-2c1a4adc93d7"
-   }
+  "twilio": {
+    "FROM": "+41798073343",
+    "ACCOUNT_SID": "AC69fa596961f79b7ac3cfd01d9e04697a",
+    "AUTH_TOKEN": "c13507a9172f75858764a7f9e70a8dd1"
+  }
 }
